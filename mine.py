@@ -67,7 +67,7 @@ def count_sheeps(sheep):
 print(count_sheeps([True, True, True, False, True, True, True, True, True, False, True, False, True, False, False, True]))
 
 
-# 7.
+# 7
 def past(h, m, s):
     hours_in_ms = h * 60 * 60 * 1000
     minutes_in_ms = m * 60 * 1000
