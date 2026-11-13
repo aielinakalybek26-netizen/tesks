@@ -455,3 +455,67 @@ print(lovefunc(1, 4))
 print(lovefunc(2, 2))
 print(lovefunc(0, 1))
 print(lovefunc(3, 5))
+
+
+#36
+def solution(string):
+    result = ""
+    for letter in string:
+        result = letter + result 
+    return result
+
+print(solution("world"))
+print(solution("Hello"))
+
+
+#37
+def order(sentence):
+    if sentence == "":
+        return ""
+    words = sentence.split(" ")
+    result = []
+    for number in range(1, 10):
+        for word in words:
+            if str(number) in word:
+                result.append(word)
+    return " ".join(result)
+
+print(order("is2 Thi1s T4est 3a"))
+print(order("4of Fo1r pe6ople g3ood th5e the2"))
+print(order(""))
+
+
+#38
+def square_sum(numbers):
+    total = 0
+    for number in numbers:
+        total = total + number * number
+    return total
+
+print(square_sum([1, 2, 2]))
+print(square_sum([0, 3, 4, 5]))
+print(square_sum([]))
+
+
+#39
+def repeat_str(repeat, string):
+    result = ""
+    for i in range(repeat):
+        result = result + string
+    return result
+
+print(repeat_str(6, "I"))
+print(repeat_str(5, "Hello"))
+print(repr(repeat_str(0, "abc")))
+
+
+#40
+def grow(arr):
+    result = 1
+    for number in arr:
+        result = result * number
+    return result
+
+print(grow([1, 2, 3, 4]))
+print(grow([5]))
+print(grow([2, 0, 7]))
