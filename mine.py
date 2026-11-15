@@ -519,3 +519,47 @@ def grow(arr):
 print(grow([1, 2, 3, 4]))
 print(grow([5]))
 print(grow([2, 0, 7]))
+
+
+#41
+def is_triangle(a, b, c):
+    if a + b > c and a + c > b and b + c > a:
+        return True
+    else:
+        return False
+
+
+#42
+def greet():
+    return "hello world!"
+
+
+#43
+def digitize(n):
+    result = []
+    for digit in str(n):
+        result.append(int(digit))
+    result.reverse()
+    return result
+
+
+print(digitize(35231))
+print(digitize(0))
+
+
+#44
+def tower_builder(n_floors):
+    tower = []
+    for i in range(n_floors):
+        spaces = " " * (n_floors - i - 1)
+        stars = "*" * (2 * i + 1)
+        tower.append(spaces + stars + spaces)
+    return tower
+
+
+#45
+def solution(text, ending):
+    return text.endswith(ending)
+
+print(solution("abc", "bc"))
+print(solution("abc", "d"))
